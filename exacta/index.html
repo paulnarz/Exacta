@@ -7,13 +7,26 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <style>
+        td:first-child,
+        th {
+            font-size: 12px;            
+        }
     </style>
 </head>
 <body>
     <div class="col-lg-8 mx-auto p-4 py-md-5">
-        <h2>Fair Payout</h2> 
-        <pre id="output"></pre>
-        <script src="js/ex.js"></script>
+        <h2>Fair Payout</h2>
+        <div class="row g-3">
+            <label class="form-label">Base:</label>
+            <input id="txtBase" class="form-control" type="number" min="1" max="10" value="2" />
+            <label class="form-label">Odds:</label>
+            <textarea id="txtOdds" class="form-control"></textarea>
+            <button id="btnGo" type="button" class="btn btn-primary">Go</button>
+            <table id="tblOdds" class="table table-striped table-bordered">
+            </table>
+            <pre id="txtOutput"></pre>
+            <script src="js/ex.js"></script>
+        </div>
     </div>
 </body>
 </html>
